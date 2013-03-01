@@ -22,7 +22,7 @@
 
 @optional
 -(UIColor *)colorForCollapseClickTitleViewAtIndex:(int)index;
-
+-(UIColor *)colorForTitleLabelAtIndex:(int)index;
 
 @end
 

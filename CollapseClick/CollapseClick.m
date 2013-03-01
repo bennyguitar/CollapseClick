@@ -57,6 +57,11 @@
             cell.TitleView.backgroundColor = [CollapseClickDelegate colorForCollapseClickTitleViewAtIndex:xx];
         }
         
+        // Set cell.TitleLabel's Color
+        if ([self respondsToSelector:@selector(colorForTitleLabelAtIndex:)]) {
+            cell.TitleLabel.textColor = [CollapseClickDelegate colorForTitleLabelAtIndex:xx];
+        }
+        
         // Set cell.ContentView's size
         cell.ContentView.frame = CGRectMake(0, kCCHeaderHeight + kCCPad, self.frame.size.width, cell.ContentView.frame.size.height);
         
