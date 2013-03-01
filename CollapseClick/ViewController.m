@@ -33,6 +33,7 @@
   ///////////////////////////
  // CollapseClickDelegate //
 ///////////////////////////
+
 -(int)numberOfCellsForCollapseClick {
     return 3;
 }
@@ -61,6 +62,10 @@
 }
 
 
+-(UIColor *)colorForTitleLabelAtIndex:(int)index {
+    return [UIColor colorWithWhite:1.0 alpha:0.85];
+}
+
 -(UIView *)viewForCollapseClickContentViewAtIndex:(int)index {
     switch (index) {
         case 0:
@@ -79,4 +84,12 @@
     }
 }
 
+
+  ///////////////////////////
+ // CollapseClick Methods //
+///////////////////////////
+
+- (IBAction)testScrollCellsMethod:(id)sender {
+    [myCollapseClick scrollToCollapseClickCellAtIndex:2 animated:YES];
+}
 @end

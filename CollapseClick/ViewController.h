@@ -16,5 +16,6 @@
     
     __weak IBOutlet CollapseClick *myCollapseClick;
 }
+- (IBAction)testScrollCellsMethod:(id)sender;
 
 @end
