@@ -7,7 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CollapseClick.h"
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController <CollapseClickDelegate,UIScrollViewDelegate> {
+    IBOutlet UIView *test1View;
+    IBOutlet UIView *test2View;
+    IBOutlet UIView *test3View;
+    
+    __weak IBOutlet CollapseClick *myCollapseClick;
+}
 
 @end

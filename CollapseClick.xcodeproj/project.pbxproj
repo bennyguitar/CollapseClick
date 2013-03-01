@@ -18,6 +18,9 @@
 		C023144816E038C1006601D3 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C023144716E038C1006601D3 /* Default-568h@2x.png */; };
 		C023144B16E038C1006601D3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C023144A16E038C1006601D3 /* ViewController.m */; };
 		C023144E16E038C1006601D3 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C023144C16E038C1006601D3 /* ViewController.xib */; };
+		C023145716E03905006601D3 /* CollapseClick.m in Sources */ = {isa = PBXBuildFile; fileRef = C023145616E03905006601D3 /* CollapseClick.m */; };
+		C023145A16E039D2006601D3 /* CollapseClickCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C023145916E039D2006601D3 /* CollapseClickCell.m */; };
+		C023145C16E039E0006601D3 /* CollapseClickCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C023145B16E039DF006601D3 /* CollapseClickCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +40,11 @@
 		C023144916E038C1006601D3 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		C023144A16E038C1006601D3 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		C023144D16E038C1006601D3 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
+		C023145516E03905006601D3 /* CollapseClick.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollapseClick.h; sourceTree = "<group>"; };
+		C023145616E03905006601D3 /* CollapseClick.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollapseClick.m; sourceTree = "<group>"; };
+		C023145816E039D2006601D3 /* CollapseClickCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollapseClickCell.h; sourceTree = "<group>"; };
+		C023145916E039D2006601D3 /* CollapseClickCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollapseClickCell.m; sourceTree = "<group>"; };
+		C023145B16E039DF006601D3 /* CollapseClickCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollapseClickCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +91,7 @@
 		C023143716E038C0006601D3 /* CollapseClick */ = {
 			isa = PBXGroup;
 			children = (
+				C023145416E038D3006601D3 /* CollapseClick Components */,
 				C023144016E038C1006601D3 /* AppDelegate.h */,
 				C023144116E038C1006601D3 /* AppDelegate.m */,
 				C023144916E038C1006601D3 /* ViewController.h */,
@@ -105,6 +114,18 @@
 				C023144716E038C1006601D3 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C023145416E038D3006601D3 /* CollapseClick Components */ = {
+			isa = PBXGroup;
+			children = (
+				C023145516E03905006601D3 /* CollapseClick.h */,
+				C023145616E03905006601D3 /* CollapseClick.m */,
+				C023145816E039D2006601D3 /* CollapseClickCell.h */,
+				C023145916E039D2006601D3 /* CollapseClickCell.m */,
+				C023145B16E039DF006601D3 /* CollapseClickCell.xib */,
+			);
+			name = "CollapseClick Components";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -163,6 +184,7 @@
 				C023144616E038C1006601D3 /* Default@2x.png in Resources */,
 				C023144816E038C1006601D3 /* Default-568h@2x.png in Resources */,
 				C023144E16E038C1006601D3 /* ViewController.xib in Resources */,
+				C023145C16E039E0006601D3 /* CollapseClickCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -176,6 +198,8 @@
 				C023143E16E038C1006601D3 /* main.m in Sources */,
 				C023144216E038C1006601D3 /* AppDelegate.m in Sources */,
 				C023144B16E038C1006601D3 /* ViewController.m in Sources */,
+				C023145716E03905006601D3 /* CollapseClick.m in Sources */,
+				C023145A16E039D2006601D3 /* CollapseClickCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
