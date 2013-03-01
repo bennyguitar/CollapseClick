@@ -45,8 +45,8 @@
 
 // Methods
 -(void)reloadCollapseClick;
--(void)scrollToCollapseClickCellAtIndex:(int)index animated:(BOOL)animated;
 -(CollapseClickCell *)collapseClickCellForIndex:(int)index;
-
+-(void)scrollToCollapseClickCellAtIndex:(int)index animated:(BOOL)animated;
+-(void)insertNewCellWithTitle:(NSString *)title viewForContent:(UIView *)content atIndex:(int)index;
 
 @end

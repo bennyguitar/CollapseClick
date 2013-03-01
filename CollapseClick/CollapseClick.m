@@ -84,6 +84,7 @@
 }
 
 
+
 #pragma mark - Reposition Cells
 -(void)repositionCollapseClickCellsBelowIndex:(int)index withOffset:(float)offset {
     for (int yy = index+1; yy < self.dataArray.count; yy++) {
@@ -142,6 +143,13 @@
 -(void)scrollToCollapseClickCellAtIndex:(int)index animated:(BOOL)animated {
     CollapseClickCell *cell = [self.dataArray objectAtIndex:index];
     [self setContentOffset:CGPointMake(cell.frame.origin.x, cell.frame.origin.y) animated:animated];
+}
+
+
+
+#pragma mark - Insert Cell at Index
+-(void)insertNewCellWithTitle:(NSString *)title viewForContent:(UIView *)content atIndex:(int)index {
+    // Fill In!
 }
 
 
