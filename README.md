@@ -50,7 +50,7 @@ Required Delegate Methods:
 
 
 
-// 3. View for each CollapseClickCell's Content
+// 3. View for each CollapseClickCell\'s Content
 //    - This is the View that appears when you OPEN a cell.
 //    - This can be a .XIB, or a dynamically created view, etc.
 
@@ -60,7 +60,7 @@ Required Delegate Methods:
 
 
 
-// 4. Color of each CollapseClickCell's TitleView Background
+// 4. Color of each CollapseClickCell\'s TitleView Background
 //    - This is an optional method.
 //    - This color is for the background of the clickable, header area.
 
