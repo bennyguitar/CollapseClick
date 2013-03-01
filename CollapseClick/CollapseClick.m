@@ -53,7 +53,9 @@
         CollapseClickCell *cell = [CollapseClickCell newCollapseClickCellWithTitle:[CollapseClickDelegate titleForCollapseClickAtIndex:xx] index:xx content:[CollapseClickDelegate viewForCollapseClickContentViewAtIndex:xx]];
         
         // Set cell.TitleView's backgroundColor
-        cell.TitleView.backgroundColor = [CollapseClickDelegate colorForCollapseClickTitleViewAtIndex:xx];
+        if ([self respondsToSelector:@selector(colorForCollapseClickTitleViewAtIndex:)]) {
+            cell.TitleView.backgroundColor = [CollapseClickDelegate colorForCollapseClickTitleViewAtIndex:xx];
+        }
         
         // Set cell.ContentView's size
         cell.ContentView.frame = CGRectMake(0, kCCHeaderHeight + kCCPad, self.frame.size.width, cell.ContentView.frame.size.height);

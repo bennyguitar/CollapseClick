@@ -55,9 +55,11 @@
     }
 }
 
+
 -(UIColor *)colorForCollapseClickTitleViewAtIndex:(int)index {
     return [UIColor colorWithRed:71/255.0f green:201/255.0f blue:110/255.0f alpha:1.0];
 }
+
 
 -(UIView *)viewForCollapseClickContentViewAtIndex:(int)index {
     switch (index) {

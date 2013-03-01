@@ -15,13 +15,13 @@
  // Delegate //
 //////////////
 @protocol CollapseClickDelegate
-@optional
-
-// Data
+@required
 -(int)numberOfCellsForCollapseClick;
 -(NSString *)titleForCollapseClickAtIndex:(int)index;
--(UIColor *)colorForCollapseClickTitleViewAtIndex:(int)index;
 -(UIView *)viewForCollapseClickContentViewAtIndex:(int)index;
+
+@optional
+-(UIColor *)colorForCollapseClickTitleViewAtIndex:(int)index;
 
 
 @end
@@ -32,7 +32,7 @@
   ///////////////
  // Interface //
 ///////////////
-@interface CollapseClick : UIScrollView <UIScrollViewDelegate> {
+@interface CollapseClick : UIScrollView <UIScrollViewDelegate>  {
     __weak id <CollapseClickDelegate> CollapseClickDelegate;
 }
 
