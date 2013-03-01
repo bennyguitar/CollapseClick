@@ -23,6 +23,7 @@
     return self;
 }
 
+
 #pragma mark - Load Data
 -(void)reloadCollapseClick {
     // Set Up: Height
@@ -81,25 +82,21 @@
 }
 
 
-
 #pragma mark - Reposition Cells
 -(void)repositionCollapseClickCellsBelowIndex:(int)index withOffset:(float)offset {
     for (int yy = index+1; yy < self.dataArray.count; yy++) {
         CollapseClickCell *cell = [self.dataArray objectAtIndex:yy];
         cell.frame = CGRectMake(cell.frame.origin.x, cell.frame.origin.y + offset, cell.frame.size.width, cell.frame.size.height);
-        
-        // If the cell is last, change the ContentSize of the ScrollView
-        if (yy == self.dataArray.count - 1) {
-            [self setContentSize:CGSizeMake(self.frame.size.width, cell.frame.origin.y + cell.frame.size.height + kCCPad)];
-        }
     }
+    
+    // Resize self.ContentSize
+    CollapseClickCell *lastCell = [self.dataArray objectAtIndex:self.dataArray.count - 1];
+    [self setContentSize:CGSizeMake(self.frame.size.width, lastCell.frame.origin.y + lastCell.frame.size.height + kCCPad)];
 }
 
 
 #pragma mark - Did Click
 -(void)didSelectCollapseClickButton:(UIButton *)titleButton {
-    NSLog(@"DidClick");
-    
     // Cell is OPEN -> CLOSED
     if ([[self.isClickedArray objectAtIndex:titleButton.tag] boolValue] == YES) {
         // Resize Cell
@@ -128,6 +125,22 @@
     
 }
 
+
+#pragma mark - CollapseClickCell for Index
+-(CollapseClickCell *)collapseClickCellForIndex:(int)index {
+    if ([[self.dataArray objectAtIndex:index] isKindOfClass:[CollapseClickCell class]]) {
+        return [self.dataArray objectAtIndex:index];
+    }
+    
+    return nil;
+}
+
+
+#pragma mark - Scroll To Cell
+-(void)scrollToCollapseClickCellAtIndex:(int)index animated:(BOOL)animated {
+    CollapseClickCell *cell = [self.dataArray objectAtIndex:index];
+    [self setContentOffset:CGPointMake(cell.frame.origin.x, cell.frame.origin.y) animated:animated];
+}
 
 
 @end

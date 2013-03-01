@@ -43,7 +43,10 @@
 @property (nonatomic, retain) NSMutableArray *isClickedArray;
 @property (nonatomic, retain) NSMutableArray *dataArray;
 
+// Methods
 -(void)reloadCollapseClick;
+-(void)scrollToCollapseClickCellAtIndex:(int)index animated:(BOOL)animated;
+-(CollapseClickCell *)collapseClickCellForIndex:(int)index;
 
 
 @end
