@@ -69,7 +69,7 @@ This method sets the Title Label's textColor property. Default is <code>[UIColor
     return (UIColor *)color;
 }
 ```
-This method sets the color of the arrow at the right of each CollapseClick Cell. Default is <code>[UIColor colorWithWhite]</code>
+This method sets the color of the arrow at the right of each CollapseClick Cell. Default is <code>[UIColor colorWithWhite:0.0 alpha:0.35]</code>
 
 
 Reap What I Sow!
