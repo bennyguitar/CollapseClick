@@ -160,7 +160,7 @@
 				LastUpgradeCheck = 0450;
 				ORGANIZATIONNAME = "Ben Gordon";
 			};
-			buildConfigurationList = C023142716E038C0006601D3 /* Build configuration list for PBXProject "CollapseClickDemo" */;
+			buildConfigurationList = C023142716E038C0006601D3 /* Build configuration list for PBXProject "CollapseClick Demo" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -265,6 +265,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CollapseClick/CollapseClick-Prefix.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/CollapseClickDemo/CollapseClick-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -276,6 +277,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CollapseClick/CollapseClick-Prefix.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/CollapseClickDemo/CollapseClick-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -284,7 +286,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		C023142716E038C0006601D3 /* Build configuration list for PBXProject "CollapseClickDemo" */ = {
+		C023142716E038C0006601D3 /* Build configuration list for PBXProject "CollapseClick Demo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C023144F16E038C1006601D3 /* Debug */,
