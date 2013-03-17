@@ -54,8 +54,12 @@
         
         
         // Set cell.TitleView's backgroundColor
+<<<<<<< HEAD
         // FIXME: So it works
         if ([self respondsToSelector:@selector(colorForCollapseClickTitleViewAtIndex:)]) {
+=======
+        if ([(id)CollapseClickDelegate respondsToSelector:@selector(colorForCollapseClickTitleViewAtIndex:)]) {
+>>>>>>> Animated and Delegate didRespondToSelector methods added
             cell.TitleView.backgroundColor = [CollapseClickDelegate colorForCollapseClickTitleViewAtIndex:xx];
         }
         
@@ -116,32 +120,33 @@
 
 #pragma mark - Did Click
 -(void)didSelectCollapseClickButton:(UIButton *)titleButton {
-    // Cell is OPEN -> CLOSED
-    if ([[self.isClickedArray objectAtIndex:titleButton.tag] boolValue] == YES) {
-        // Resize Cell
-        CollapseClickCell *cell = [self.dataArray objectAtIndex:titleButton.tag];
-        cell.frame = CGRectMake(cell.frame.origin.x, cell.frame.origin.y, cell.frame.size.width, kCCHeaderHeight);
+    [UIView animateWithDuration:0.25 animations:^{
+        // Cell is OPEN -> CLOSED
+        if ([[self.isClickedArray objectAtIndex:titleButton.tag] boolValue] == YES) {
+            // Resize Cell
+            CollapseClickCell *cell = [self.dataArray objectAtIndex:titleButton.tag];
+            cell.frame = CGRectMake(cell.frame.origin.x, cell.frame.origin.y, cell.frame.size.width, kCCHeaderHeight);
+            
+            // Change isClickedArray
+            [self.isClickedArray replaceObjectAtIndex:titleButton.tag withObject:[NSNumber numberWithBool:NO]];
+            
+            // Reposition all CollapseClickCells below Cell
+            [self repositionCollapseClickCellsBelowIndex:titleButton.tag withOffset:-1*(cell.ContentView.frame.size.height + kCCPad)];
+        }
         
-        // Change isClickedArray
-        [self.isClickedArray replaceObjectAtIndex:titleButton.tag withObject:[NSNumber numberWithBool:NO]];
-        
-        // Reposition all CollapseClickCells below Cell
-        [self repositionCollapseClickCellsBelowIndex:titleButton.tag withOffset:-1*(cell.ContentView.frame.size.height + kCCPad)];
-    }
-    
-    // Cell is CLOSED -> OPEN
-    else {
-        // Resize Cell
-        CollapseClickCell *cell = [self.dataArray objectAtIndex:titleButton.tag];
-        cell.frame = CGRectMake(cell.frame.origin.x, cell.frame.origin.y, cell.frame.size.width, cell.ContentView.frame.origin.y + cell.ContentView.frame.size.height + kCCPad);
-        
-        // Change isClickedArray
-        [self.isClickedArray replaceObjectAtIndex:titleButton.tag withObject:[NSNumber numberWithBool:YES]];
-        
-        // Reposition all CollapseClickCells below Cell
-        [self repositionCollapseClickCellsBelowIndex:titleButton.tag withOffset:cell.ContentView.frame.size.height + kCCPad];
-    }
-    
+        // Cell is CLOSED -> OPEN
+        else {
+            // Resize Cell
+            CollapseClickCell *cell = [self.dataArray objectAtIndex:titleButton.tag];
+            cell.frame = CGRectMake(cell.frame.origin.x, cell.frame.origin.y, cell.frame.size.width, cell.ContentView.frame.origin.y + cell.ContentView.frame.size.height + kCCPad);
+            
+            // Change isClickedArray
+            [self.isClickedArray replaceObjectAtIndex:titleButton.tag withObject:[NSNumber numberWithBool:YES]];
+            
+            // Reposition all CollapseClickCells below Cell
+            [self repositionCollapseClickCellsBelowIndex:titleButton.tag withOffset:cell.ContentView.frame.size.height + kCCPad];
+        }
+    }];
 }
 
 
