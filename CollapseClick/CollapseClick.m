@@ -76,7 +76,7 @@
             [cell.TitleArrow drawWithColor:[CollapseClickDelegate colorForTitleArrowAtIndex:xx]];
         }
         else {
-            [cell.TitleArrow drawWithColor:[UIColor whiteColor]];
+            [cell.TitleArrow drawWithColor:[UIColor colorWithWhite:0.0 alpha:0.35]];
         }
         
         // Set cell.ContentView's size
