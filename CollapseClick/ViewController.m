@@ -35,7 +35,7 @@
 ///////////////////////////
 
 -(int)numberOfCellsForCollapseClick {
-    return 3;
+    return 5;
 }
 
 -(NSString *)titleForCollapseClickAtIndex:(int)index {
@@ -51,7 +51,7 @@
             break;
             
         default:
-            return @"";
+            return [NSString stringWithFormat:@"LOLOL %d", index];
             break;
     }
 }
@@ -64,6 +64,10 @@
 
 -(UIColor *)colorForTitleLabelAtIndex:(int)index {
     return [UIColor colorWithWhite:1.0 alpha:0.85];
+}
+
+-(UIColor *)colorForTitleArrowAtIndex:(int)index {
+    return [UIColor colorWithWhite:0.0 alpha:0.35];
 }
 
 -(UIView *)viewForCollapseClickContentViewAtIndex:(int)index {
@@ -79,7 +83,7 @@
             break;
             
         default:
-            return [[UIView alloc] init];
+            return test1View;
             break;
     }
 }

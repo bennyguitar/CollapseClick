@@ -54,24 +54,30 @@
         
         
         // Set cell.TitleView's backgroundColor
-        // FIXME: So it works
         if ([(id)CollapseClickDelegate respondsToSelector:@selector(colorForCollapseClickTitleViewAtIndex:)]) {
             cell.TitleView.backgroundColor = [CollapseClickDelegate colorForCollapseClickTitleViewAtIndex:xx];
         }
-        
-        // For Now:
-        cell.TitleView.backgroundColor = [CollapseClickDelegate colorForCollapseClickTitleViewAtIndex:xx];
+        else {
+            cell.TitleView.backgroundColor = [UIColor colorWithWhite:0.4 alpha:1.0];
+        }
         
         
         // Set cell.TitleLabel's Color
-        // FIXME: So it works
-        if ([self respondsToSelector:@selector(colorForTitleLabelAtIndex:)]) {
+        if ([(id)CollapseClickDelegate respondsToSelector:@selector(colorForTitleLabelAtIndex:)]) {
             cell.TitleLabel.textColor = [CollapseClickDelegate colorForTitleLabelAtIndex:xx];
         }
+        else {
+            cell.TitleLabel.textColor = [UIColor whiteColor];
+        }
         
-        // For Now:
-        cell.TitleLabel.textColor = [CollapseClickDelegate colorForTitleLabelAtIndex:xx];
         
+        // Set cell.TitleArrow's Color
+        if ([(id)CollapseClickDelegate respondsToSelector:@selector(colorForTitleArrowAtIndex:)]) {
+            [cell.TitleArrow drawWithColor:[CollapseClickDelegate colorForTitleArrowAtIndex:xx]];
+        }
+        else {
+            [cell.TitleArrow drawWithColor:[UIColor whiteColor]];
+        }
         
         // Set cell.ContentView's size
         cell.ContentView.frame = CGRectMake(0, kCCHeaderHeight + kCCPad, self.frame.size.width, cell.ContentView.frame.size.height);
@@ -123,6 +129,10 @@
             CollapseClickCell *cell = [self.dataArray objectAtIndex:titleButton.tag];
             cell.frame = CGRectMake(cell.frame.origin.x, cell.frame.origin.y, cell.frame.size.width, kCCHeaderHeight);
             
+            // Change Arrow orientation
+            CGAffineTransform transform = CGAffineTransformMakeRotation(0);
+            cell.TitleArrow.transform = transform;
+            
             // Change isClickedArray
             [self.isClickedArray replaceObjectAtIndex:titleButton.tag withObject:[NSNumber numberWithBool:NO]];
             
@@ -135,6 +145,10 @@
             // Resize Cell
             CollapseClickCell *cell = [self.dataArray objectAtIndex:titleButton.tag];
             cell.frame = CGRectMake(cell.frame.origin.x, cell.frame.origin.y, cell.frame.size.width, cell.ContentView.frame.origin.y + cell.ContentView.frame.size.height + kCCPad);
+            
+            // Change Arrow orientation
+            CGAffineTransform transform = CGAffineTransformMakeRotation(M_PI/2);
+            cell.TitleArrow.transform = transform;
             
             // Change isClickedArray
             [self.isClickedArray replaceObjectAtIndex:titleButton.tag withObject:[NSNumber numberWithBool:YES]];

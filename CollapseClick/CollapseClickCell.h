@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CollapseClickArrow.h"
 
 #define kCCHeaderHeight 50
 
@@ -16,6 +17,7 @@
 @property (weak, nonatomic) IBOutlet UIView *TitleView;
 @property (weak, nonatomic) IBOutlet UILabel *TitleLabel;
 @property (weak, nonatomic) IBOutlet UIButton *TitleButton;
+@property (weak, nonatomic) IBOutlet CollapseClickArrow *TitleArrow;
 
 // Body
 @property (weak, nonatomic) IBOutlet UIView *ContentView;
