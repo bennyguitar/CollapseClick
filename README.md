@@ -6,7 +6,7 @@ A collapsible list that functions like a UITableView, except you can collapse an
 
 ## Installation ##
 
-Drag the included <code>CollapseClick.m, CollapseClick.h, CollapseClickCell.m, CollapseClickCell.h, CollapseClickCell.xib</code> files into your project.
+Drag the included <code>CollapseClick.m, CollapseClick.h, CollapseClickCell.m, CollapseClickCell.h, CollapseClickCell.xib, CollapseClickArrow.h, CollapseClickArrow.m</code> files into your project.
 
 Import CollapseClick.h into your ViewController.h file. Next, in InterfaceBuilder, drag a UIScrollView out into your ViewController. Click on the Identity Inspector (3rd icon from the left, in the Right Pane in XCode) and change the class to <code>CollapseClick</code>. Connect up your CollapseClick to your ViewController.h file. Now add the CollapseClickDelegate. Your interface should look like this now:
 
@@ -25,51 +25,51 @@ You are now ready to roll.
 
 ## Using CollapseClick ##
 
-CollapseClick works off of delegation, similar to how UITableView appropriates and displays its data. There are 4 delegate methods you can implement, 3 of which are required.
+CollapseClick works off of delegation, similar to how UITableView appropriates and displays its data. There are 6 delegate methods you can implement, 3 of which are required.
 
+**Required Delegate Methods**
 ```shell
-Required Delegate Methods:
-
-// 1. Number of CollapseClickCells
-//    - This is the number of cells to display, usually based
-//      off your data source.
-
 -(int)numberOfCellsForCollapseClick {
     return (int)newInt;
 }
+```
+This method is fairly clear, it's just the number of CollapseClick Cells to display. Usually you would use this similar to a UITableView with your data array's count being the return here.
 
-
-
-// 2. Title for each CollapseClickCell
-//    - This is the text for the label that appears in the
-//      clickable, header area of each cell.
-
+```shell
 -(NSString *)titleForCollapseClickAtIndex:(int)index {
     return (NSString*)newTitle;
 }
+```
+This method just sets the Title Label's text for each CollapseClick Cell. 
 
-
-
-// 3. View for the Content of each CollapseClickCell
-//    - This is the View that appears when you OPEN a cell.
-//    - This can be a .XIB, or a dynamically created view, etc.
-
+```shell
 -(UIView *)viewForCollapseClickContentViewAtIndex:(int)index {
     return (UIView *)contentView;
 }
+```
+This method sets the ContentView property of each CollapseClick Cell. This is the fun part. You can use programmatically created UIViews or use instance variables of UIViews you create in Interface Builder. As long as it's a UIView, this method will put it in the collapsible section of your CollapseClick Cell.
 
-
-
-// 4. Color for the TitleView Background of each CollapseClickCell
-//    - This is an optional method.
-//    - This color is for the background of the clickable, header area.
-
+**Optional Delegate Methods**
+```shell
 -(UIColor *)colorForCollapseClickTitleViewAtIndex:(int)index {
     return (UIColor *)color;
 }
 ```
+This method sets the background color for your CollapseClick Cell's header or TitleView. It's the red area in the screenshot above. Default is <code>[UIColor colorWithWhite:0.4 alpha:1.0]</code>
 
-Just implement these methods, and your customized CollapseClick will be good to go.
+```shell
+-(UIColor *)colorForTitleLabelAtIndex:(int)index {
+    return (UIColor *)color;
+}
+```
+This method sets the Title Label's textColor property. Default is <code>[UIColor colorWithWhite]</code>
+
+```shell
+-(UIColor *)colorForTitleArrowAtIndex:(int)index {
+    return (UIColor *)color;
+}
+```
+This method sets the color of the arrow at the right of each CollapseClick Cell. Default is <code>[UIColor colorWithWhite]</code>
 
 
 Reap What I Sow!
