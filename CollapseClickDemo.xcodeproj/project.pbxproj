@@ -10,20 +10,18 @@
 		C023143216E038C0006601D3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C023143116E038C0006601D3 /* UIKit.framework */; };
 		C023143416E038C0006601D3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C023143316E038C0006601D3 /* Foundation.framework */; };
 		C023143616E038C0006601D3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C023143516E038C0006601D3 /* CoreGraphics.framework */; };
-		C023143C16E038C0006601D3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C023143A16E038C0006601D3 /* InfoPlist.strings */; };
-		C023143E16E038C1006601D3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C023143D16E038C1006601D3 /* main.m */; };
-		C023144216E038C1006601D3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C023144116E038C1006601D3 /* AppDelegate.m */; };
-		C023144416E038C1006601D3 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = C023144316E038C1006601D3 /* Default.png */; };
-		C023144616E038C1006601D3 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C023144516E038C1006601D3 /* Default@2x.png */; };
-		C023144816E038C1006601D3 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C023144716E038C1006601D3 /* Default-568h@2x.png */; };
-		C023144B16E038C1006601D3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C023144A16E038C1006601D3 /* ViewController.m */; };
-		C023144E16E038C1006601D3 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C023144C16E038C1006601D3 /* ViewController.xib */; };
 		C023145716E03905006601D3 /* CollapseClick.m in Sources */ = {isa = PBXBuildFile; fileRef = C023145616E03905006601D3 /* CollapseClick.m */; };
 		C023145A16E039D2006601D3 /* CollapseClickCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C023145916E039D2006601D3 /* CollapseClickCell.m */; };
 		C023145C16E039E0006601D3 /* CollapseClickCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C023145B16E039DF006601D3 /* CollapseClickCell.xib */; };
 		C0F970FA16F63A5B00AF5F1E /* CollapseClickArrow.m in Sources */ = {isa = PBXBuildFile; fileRef = C0F970F916F63A5A00AF5F1E /* CollapseClickArrow.m */; };
-		C0F970FD16F662F000AF5F1E /* password-01.png in Resources */ = {isa = PBXBuildFile; fileRef = C0F970FB16F662F000AF5F1E /* password-01.png */; };
-		C0F970FE16F662F000AF5F1E /* username-01.png in Resources */ = {isa = PBXBuildFile; fileRef = C0F970FC16F662F000AF5F1E /* username-01.png */; };
+		C0F9710A16F67A4700AF5F1E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C0F9710016F67A4600AF5F1E /* AppDelegate.m */; };
+		C0F9710B16F67A4700AF5F1E /* CollapseClick-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C0F9710116F67A4600AF5F1E /* CollapseClick-Info.plist */; };
+		C0F9710C16F67A4700AF5F1E /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C0F9710316F67A4600AF5F1E /* Default-568h@2x.png */; };
+		C0F9710D16F67A4700AF5F1E /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = C0F9710416F67A4600AF5F1E /* Default.png */; };
+		C0F9710E16F67A4700AF5F1E /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C0F9710516F67A4600AF5F1E /* Default@2x.png */; };
+		C0F9710F16F67A4700AF5F1E /* password-01.png in Resources */ = {isa = PBXBuildFile; fileRef = C0F9710616F67A4600AF5F1E /* password-01.png */; };
+		C0F9711016F67A4700AF5F1E /* username-01.png in Resources */ = {isa = PBXBuildFile; fileRef = C0F9710716F67A4600AF5F1E /* username-01.png */; };
+		C0F9711116F67A4700AF5F1E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C0F9710916F67A4600AF5F1E /* ViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,18 +29,6 @@
 		C023143116E038C0006601D3 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		C023143316E038C0006601D3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C023143516E038C0006601D3 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		C023143916E038C0006601D3 /* CollapseClick-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CollapseClick-Info.plist"; sourceTree = "<group>"; };
-		C023143B16E038C0006601D3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		C023143D16E038C1006601D3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		C023143F16E038C1006601D3 /* CollapseClick-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CollapseClick-Prefix.pch"; sourceTree = "<group>"; };
-		C023144016E038C1006601D3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		C023144116E038C1006601D3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		C023144316E038C1006601D3 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
-		C023144516E038C1006601D3 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
-		C023144716E038C1006601D3 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		C023144916E038C1006601D3 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		C023144A16E038C1006601D3 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		C023144D16E038C1006601D3 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
 		C023145516E03905006601D3 /* CollapseClick.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollapseClick.h; sourceTree = "<group>"; };
 		C023145616E03905006601D3 /* CollapseClick.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollapseClick.m; sourceTree = "<group>"; };
 		C023145816E039D2006601D3 /* CollapseClickCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollapseClickCell.h; sourceTree = "<group>"; };
@@ -50,8 +36,17 @@
 		C023145B16E039DF006601D3 /* CollapseClickCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollapseClickCell.xib; sourceTree = "<group>"; };
 		C0F970F816F63A5A00AF5F1E /* CollapseClickArrow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollapseClickArrow.h; sourceTree = "<group>"; };
 		C0F970F916F63A5A00AF5F1E /* CollapseClickArrow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollapseClickArrow.m; sourceTree = "<group>"; };
-		C0F970FB16F662F000AF5F1E /* password-01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "password-01.png"; sourceTree = "<group>"; };
-		C0F970FC16F662F000AF5F1E /* username-01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "username-01.png"; sourceTree = "<group>"; };
+		C0F970FF16F67A4600AF5F1E /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = CollapseClickDemo/AppDelegate.h; sourceTree = SOURCE_ROOT; };
+		C0F9710016F67A4600AF5F1E /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = CollapseClickDemo/AppDelegate.m; sourceTree = SOURCE_ROOT; };
+		C0F9710116F67A4600AF5F1E /* CollapseClick-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "CollapseClick-Info.plist"; path = "CollapseClickDemo/CollapseClick-Info.plist"; sourceTree = SOURCE_ROOT; };
+		C0F9710216F67A4600AF5F1E /* CollapseClick-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "CollapseClick-Prefix.pch"; path = "CollapseClickDemo/CollapseClick-Prefix.pch"; sourceTree = SOURCE_ROOT; };
+		C0F9710316F67A4600AF5F1E /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "CollapseClickDemo/Default-568h@2x.png"; sourceTree = SOURCE_ROOT; };
+		C0F9710416F67A4600AF5F1E /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = CollapseClickDemo/Default.png; sourceTree = SOURCE_ROOT; };
+		C0F9710516F67A4600AF5F1E /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "CollapseClickDemo/Default@2x.png"; sourceTree = SOURCE_ROOT; };
+		C0F9710616F67A4600AF5F1E /* password-01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "password-01.png"; path = "CollapseClickDemo/password-01.png"; sourceTree = SOURCE_ROOT; };
+		C0F9710716F67A4600AF5F1E /* username-01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "username-01.png"; path = "CollapseClickDemo/username-01.png"; sourceTree = SOURCE_ROOT; };
+		C0F9710816F67A4600AF5F1E /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ViewController.h; path = CollapseClickDemo/ViewController.h; sourceTree = SOURCE_ROOT; };
+		C0F9710916F67A4600AF5F1E /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ViewController.m; path = CollapseClickDemo/ViewController.m; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,11 +94,10 @@
 			isa = PBXGroup;
 			children = (
 				C023145416E038D3006601D3 /* CollapseClick Components */,
-				C023144016E038C1006601D3 /* AppDelegate.h */,
-				C023144116E038C1006601D3 /* AppDelegate.m */,
-				C023144916E038C1006601D3 /* ViewController.h */,
-				C023144A16E038C1006601D3 /* ViewController.m */,
-				C023144C16E038C1006601D3 /* ViewController.xib */,
+				C0F970FF16F67A4600AF5F1E /* AppDelegate.h */,
+				C0F9710016F67A4600AF5F1E /* AppDelegate.m */,
+				C0F9710816F67A4600AF5F1E /* ViewController.h */,
+				C0F9710916F67A4600AF5F1E /* ViewController.m */,
 				C023143816E038C0006601D3 /* Supporting Files */,
 			);
 			path = CollapseClick;
@@ -112,15 +106,13 @@
 		C023143816E038C0006601D3 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				C0F970FB16F662F000AF5F1E /* password-01.png */,
-				C0F970FC16F662F000AF5F1E /* username-01.png */,
-				C023143916E038C0006601D3 /* CollapseClick-Info.plist */,
-				C023143A16E038C0006601D3 /* InfoPlist.strings */,
-				C023143D16E038C1006601D3 /* main.m */,
-				C023143F16E038C1006601D3 /* CollapseClick-Prefix.pch */,
-				C023144316E038C1006601D3 /* Default.png */,
-				C023144516E038C1006601D3 /* Default@2x.png */,
-				C023144716E038C1006601D3 /* Default-568h@2x.png */,
+				C0F9710116F67A4600AF5F1E /* CollapseClick-Info.plist */,
+				C0F9710216F67A4600AF5F1E /* CollapseClick-Prefix.pch */,
+				C0F9710316F67A4600AF5F1E /* Default-568h@2x.png */,
+				C0F9710416F67A4600AF5F1E /* Default.png */,
+				C0F9710516F67A4600AF5F1E /* Default@2x.png */,
+				C0F9710616F67A4600AF5F1E /* password-01.png */,
+				C0F9710716F67A4600AF5F1E /* username-01.png */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -168,7 +160,7 @@
 				LastUpgradeCheck = 0450;
 				ORGANIZATIONNAME = "Ben Gordon";
 			};
-			buildConfigurationList = C023142716E038C0006601D3 /* Build configuration list for PBXProject "CollapseClick" */;
+			buildConfigurationList = C023142716E038C0006601D3 /* Build configuration list for PBXProject "CollapseClickDemo" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -190,14 +182,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C023143C16E038C0006601D3 /* InfoPlist.strings in Resources */,
-				C023144416E038C1006601D3 /* Default.png in Resources */,
-				C023144616E038C1006601D3 /* Default@2x.png in Resources */,
-				C023144816E038C1006601D3 /* Default-568h@2x.png in Resources */,
-				C023144E16E038C1006601D3 /* ViewController.xib in Resources */,
 				C023145C16E039E0006601D3 /* CollapseClickCell.xib in Resources */,
-				C0F970FD16F662F000AF5F1E /* password-01.png in Resources */,
-				C0F970FE16F662F000AF5F1E /* username-01.png in Resources */,
+				C0F9710B16F67A4700AF5F1E /* CollapseClick-Info.plist in Resources */,
+				C0F9710C16F67A4700AF5F1E /* Default-568h@2x.png in Resources */,
+				C0F9710D16F67A4700AF5F1E /* Default.png in Resources */,
+				C0F9710E16F67A4700AF5F1E /* Default@2x.png in Resources */,
+				C0F9710F16F67A4700AF5F1E /* password-01.png in Resources */,
+				C0F9711016F67A4700AF5F1E /* username-01.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -208,35 +199,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C023143E16E038C1006601D3 /* main.m in Sources */,
-				C023144216E038C1006601D3 /* AppDelegate.m in Sources */,
-				C023144B16E038C1006601D3 /* ViewController.m in Sources */,
 				C023145716E03905006601D3 /* CollapseClick.m in Sources */,
 				C023145A16E039D2006601D3 /* CollapseClickCell.m in Sources */,
 				C0F970FA16F63A5B00AF5F1E /* CollapseClickArrow.m in Sources */,
+				C0F9710A16F67A4700AF5F1E /* AppDelegate.m in Sources */,
+				C0F9711116F67A4700AF5F1E /* ViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		C023143A16E038C0006601D3 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C023143B16E038C0006601D3 /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		C023144C16E038C1006601D3 /* ViewController.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C023144D16E038C1006601D3 /* en */,
-			);
-			name = ViewController.xib;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		C023144F16E038C1006601D3 /* Debug */ = {
@@ -313,7 +284,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		C023142716E038C0006601D3 /* Build configuration list for PBXProject "CollapseClick" */ = {
+		C023142716E038C0006601D3 /* Build configuration list for PBXProject "CollapseClickDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C023144F16E038C1006601D3 /* Debug */,
