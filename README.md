@@ -71,6 +71,26 @@ This method sets the Title Label's textColor property. Default is <code>[UIColor
 ```
 This method sets the color of the arrow at the right of each CollapseClick Cell. Default is <code>[UIColor colorWithWhite:0.0 alpha:0.35]</code>
 
+**CollapseClick Additional Methods**
+```shell
+-(void)reloadCollapseClick;
+```
+This method will redraw and lay out your CollapseClick View. Call this method after a change to your data that you are using in conjunction with CollapseClick.
+
+```shell
+-(CollapseClickCell *)collapseClickCellForIndex:(int)index;
+```
+This method will return the entire CollapseClickCell at specified index. There is also a method for returning just the ContentView further down.
+
+```shell
+-(UIView *)contentViewForCellAtIndex:(int)index;
+```
+This method will return the ContentView for the CollapseClickCell at specified index.
+
+```shell
+-(void)scrollToCollapseClickCellAtIndex:(int)index animated:(BOOL)animated;
+```
+This method scrolls your CollapseClick to the cell at your specified index. You can animate this process or not.
 
 Reap What I Sow!
 ================
