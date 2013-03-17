@@ -177,13 +177,6 @@
 }
 
 
-
-#pragma mark - Insert Cell at Index
--(void)insertNewCellWithTitle:(NSString *)title viewForContent:(UIView *)content atIndex:(int)index {
-    // Fill In!
-}
-
-
 #pragma mark - Content View for Cell
 -(UIView *)contentViewForCellAtIndex:(int)index {
     CollapseClickCell *cell = [self.subviews objectAtIndex:index];
