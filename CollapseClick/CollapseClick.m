@@ -54,12 +54,8 @@
         
         
         // Set cell.TitleView's backgroundColor
-<<<<<<< HEAD
         // FIXME: So it works
-        if ([self respondsToSelector:@selector(colorForCollapseClickTitleViewAtIndex:)]) {
-=======
         if ([(id)CollapseClickDelegate respondsToSelector:@selector(colorForCollapseClickTitleViewAtIndex:)]) {
->>>>>>> Animated and Delegate didRespondToSelector methods added
             cell.TitleView.backgroundColor = [CollapseClickDelegate colorForCollapseClickTitleViewAtIndex:xx];
         }
         
