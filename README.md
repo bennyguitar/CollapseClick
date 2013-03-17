@@ -6,7 +6,7 @@ A collapsible list that functions like a UITableView, except you can collapse an
 
 ## Installation ##
 
-Drag the included <code>CollapseClick.m, CollapseClick.h, CollapseClickCell.m, CollapseClickCell.h, CollapseClickCell.xib, CollapseClickArrow.h, CollapseClickArrow.m</code> files into your project.
+Drag the included CollapseClick.m, CollapseClick.h, CollapseClickCell.m, CollapseClickCell.h, CollapseClickCell.xib, CollapseClickArrow.h, CollapseClickArrow.m files into your project. They are located in the top-level directory **CollapseClick**. You can see a demo of how to use these with the included Xcode project as well.
 
 Import CollapseClick.h into your ViewController.h file. Next, in InterfaceBuilder, drag a UIScrollView out into your ViewController. Click on the Identity Inspector (3rd icon from the left, in the Right Pane in XCode) and change the class to <code>CollapseClick</code>. Connect up your CollapseClick to your ViewController.h file. Now add the CollapseClickDelegate. Your interface should look like this now:
 
