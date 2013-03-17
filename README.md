@@ -49,9 +49,8 @@ This method just sets the Title Label's text for each CollapseClick Cell.
 }
 ```
 This method sets the ContentView property of each CollapseClick Cell. This is the fun part. You can use programmatically created UIViews or use instance variables of UIViews you create in Interface Builder. As long as it's a UIView, this method will put it in the collapsible section of your CollapseClick Cell.
-
-
-
+ 
+ 
 **Optional Delegate Methods**
 ```shell
 -(UIColor *)colorForCollapseClickTitleViewAtIndex:(int)index {
@@ -73,9 +72,8 @@ This method sets the Title Label's textColor property. Default is <code>[UIColor
 }
 ```
 This method sets the color of the arrow at the right of each CollapseClick Cell. Default is <code>[UIColor colorWithWhite:0.0 alpha:0.35]</code>
-
-
-
+ 
+ 
 **CollapseClick Additional Methods**
 ```shell
 -(void)reloadCollapseClick;
@@ -96,9 +94,8 @@ This method will return the ContentView for the CollapseClickCell at specified i
 -(void)scrollToCollapseClickCellAtIndex:(int)index animated:(BOOL)animated;
 ```
 This method scrolls your CollapseClick to the cell at your specified index. You can animate this process or not.
-
-
-
+ 
+ 
 Reap What I Sow!
 ================
 
