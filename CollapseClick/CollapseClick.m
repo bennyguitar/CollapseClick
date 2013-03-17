@@ -184,4 +184,10 @@
 }
 
 
+#pragma mark - Content View for Cell
+-(UIView *)contentViewForCellAtIndex:(int)index {
+    CollapseClickCell *cell = [self.subviews objectAtIndex:index];
+    return cell.ContentView;
+}
+
 @end

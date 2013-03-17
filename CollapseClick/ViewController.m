@@ -17,7 +17,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    myCollapseClick.delegate = self;
+    //myCollapseClick.delegate = self;
     myCollapseClick.CollapseClickDelegate = self;
     [myCollapseClick reloadCollapseClick];
 	// Do any additional setup after loading the view, typically from a nib.
@@ -30,44 +30,29 @@
 }
 
 
-  ///////////////////////////
- // CollapseClickDelegate //
-///////////////////////////
+#pragma mark - Collapse Click Delegate
 
+// Required Methods
 -(int)numberOfCellsForCollapseClick {
-    return 5;
+    return 3;
 }
 
 -(NSString *)titleForCollapseClickAtIndex:(int)index {
     switch (index) {
         case 0:
-            return @"Test 1 Header";
+            return @"Login To CollapseClick";
             break;
         case 1:
-            return @"Test 2 Header";
+            return @"Create an Account";
             break;
         case 2:
-            return @"Test 3 Header";
+            return @"Terms of Service";
             break;
             
         default:
-            return [NSString stringWithFormat:@"LOLOL %d", index];
+            return @"";
             break;
     }
-}
-
-
--(UIColor *)colorForCollapseClickTitleViewAtIndex:(int)index {
-    return [UIColor colorWithRed:71/255.0f green:201/255.0f blue:110/255.0f alpha:1.0];
-}
-
-
--(UIColor *)colorForTitleLabelAtIndex:(int)index {
-    return [UIColor colorWithWhite:1.0 alpha:0.85];
-}
-
--(UIColor *)colorForTitleArrowAtIndex:(int)index {
-    return [UIColor colorWithWhite:0.0 alpha:0.35];
 }
 
 -(UIView *)viewForCollapseClickContentViewAtIndex:(int)index {
@@ -89,11 +74,29 @@
 }
 
 
-  ///////////////////////////
- // CollapseClick Methods //
-///////////////////////////
+// Optional Methods
 
-- (IBAction)testScrollCellsMethod:(id)sender {
-    [myCollapseClick scrollToCollapseClickCellAtIndex:2 animated:YES];
+-(UIColor *)colorForCollapseClickTitleViewAtIndex:(int)index {
+    return [UIColor colorWithRed:223/255.0f green:47/255.0f blue:51/255.0f alpha:1.0];
 }
+
+
+-(UIColor *)colorForTitleLabelAtIndex:(int)index {
+    return [UIColor colorWithWhite:1.0 alpha:0.85];
+}
+
+-(UIColor *)colorForTitleArrowAtIndex:(int)index {
+    return [UIColor colorWithWhite:0.0 alpha:0.25];
+}
+
+
+
+#pragma mark - TextField Delegate for Demo
+-(BOOL)textFieldShouldReturn:(UITextField *)textField {
+    [textField resignFirstResponder];
+    return YES;
+}
+
+
+
 @end

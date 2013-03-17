@@ -22,6 +22,8 @@
 		C023145A16E039D2006601D3 /* CollapseClickCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C023145916E039D2006601D3 /* CollapseClickCell.m */; };
 		C023145C16E039E0006601D3 /* CollapseClickCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C023145B16E039DF006601D3 /* CollapseClickCell.xib */; };
 		C0F970FA16F63A5B00AF5F1E /* CollapseClickArrow.m in Sources */ = {isa = PBXBuildFile; fileRef = C0F970F916F63A5A00AF5F1E /* CollapseClickArrow.m */; };
+		C0F970FD16F662F000AF5F1E /* password-01.png in Resources */ = {isa = PBXBuildFile; fileRef = C0F970FB16F662F000AF5F1E /* password-01.png */; };
+		C0F970FE16F662F000AF5F1E /* username-01.png in Resources */ = {isa = PBXBuildFile; fileRef = C0F970FC16F662F000AF5F1E /* username-01.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +50,8 @@
 		C023145B16E039DF006601D3 /* CollapseClickCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollapseClickCell.xib; sourceTree = "<group>"; };
 		C0F970F816F63A5A00AF5F1E /* CollapseClickArrow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollapseClickArrow.h; sourceTree = "<group>"; };
 		C0F970F916F63A5A00AF5F1E /* CollapseClickArrow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollapseClickArrow.m; sourceTree = "<group>"; };
+		C0F970FB16F662F000AF5F1E /* password-01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "password-01.png"; sourceTree = "<group>"; };
+		C0F970FC16F662F000AF5F1E /* username-01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "username-01.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +112,8 @@
 		C023143816E038C0006601D3 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				C0F970FB16F662F000AF5F1E /* password-01.png */,
+				C0F970FC16F662F000AF5F1E /* username-01.png */,
 				C023143916E038C0006601D3 /* CollapseClick-Info.plist */,
 				C023143A16E038C0006601D3 /* InfoPlist.strings */,
 				C023143D16E038C1006601D3 /* main.m */,
@@ -190,6 +196,8 @@
 				C023144816E038C1006601D3 /* Default-568h@2x.png in Resources */,
 				C023144E16E038C1006601D3 /* ViewController.xib in Resources */,
 				C023145C16E039E0006601D3 /* CollapseClickCell.xib in Resources */,
+				C0F970FD16F662F000AF5F1E /* password-01.png in Resources */,
+				C0F970FE16F662F000AF5F1E /* username-01.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

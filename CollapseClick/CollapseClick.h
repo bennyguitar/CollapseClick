@@ -49,5 +49,6 @@
 -(CollapseClickCell *)collapseClickCellForIndex:(int)index;
 -(void)scrollToCollapseClickCellAtIndex:(int)index animated:(BOOL)animated;
 -(void)insertNewCellWithTitle:(NSString *)title viewForContent:(UIView *)content atIndex:(int)index;
+-(UIView *)contentViewForCellAtIndex:(int)index;
 
 @end
