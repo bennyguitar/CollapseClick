@@ -17,10 +17,20 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    //myCollapseClick.delegate = self;
     myCollapseClick.CollapseClickDelegate = self;
     [myCollapseClick reloadCollapseClick];
-	// Do any additional setup after loading the view, typically from a nib.
+    
+    // If you want a cell open on load, run this method:
+    [myCollapseClick openCollapseClickCellAtIndex:1 animated:NO];
+    
+    /*
+     // If you'd like multiple cells open on load, create an NSArray of NSNumbers
+     // with each NSNumber corresponding to the index you'd like to open.
+     // - This will open Cells at indexes 0,2 automatically
+     
+     NSArray *indexArray = @[[NSNumber numberWithInt:0],[NSNumber numberWithInt:2]];
+     [myCollapseClick openCollapseClickCellsWithIndexes:indexArray animated:NO];
+     */
 }
 
 - (void)didReceiveMemoryWarning

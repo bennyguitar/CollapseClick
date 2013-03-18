@@ -49,5 +49,9 @@
 -(CollapseClickCell *)collapseClickCellForIndex:(int)index;
 -(void)scrollToCollapseClickCellAtIndex:(int)index animated:(BOOL)animated;
 -(UIView *)contentViewForCellAtIndex:(int)index;
+-(void)openCollapseClickCellAtIndex:(int)index animated:(BOOL)animated;
+-(void)closeCollapseClickCellAtIndex:(int)index animated:(BOOL)animated;
+-(void)openCollapseClickCellsWithIndexes:(NSArray *)indexArray animated:(BOOL)animated;
+-(void)closeCollapseClickCellsWithIndexes:(NSArray *)indexArray animated:(BOOL)animated;
 
 @end

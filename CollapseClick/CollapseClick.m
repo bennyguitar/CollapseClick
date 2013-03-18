@@ -122,28 +122,27 @@
 
 #pragma mark - Did Click
 -(void)didSelectCollapseClickButton:(UIButton *)titleButton {
-    [UIView animateWithDuration:0.25 animations:^{
-        // Cell is OPEN -> CLOSED
-        if ([[self.isClickedArray objectAtIndex:titleButton.tag] boolValue] == YES) {
-            // Resize Cell
-            CollapseClickCell *cell = [self.dataArray objectAtIndex:titleButton.tag];
-            cell.frame = CGRectMake(cell.frame.origin.x, cell.frame.origin.y, cell.frame.size.width, kCCHeaderHeight);
-            
-            // Change Arrow orientation
-            CGAffineTransform transform = CGAffineTransformMakeRotation(0);
-            cell.TitleArrow.transform = transform;
-            
-            // Change isClickedArray
-            [self.isClickedArray replaceObjectAtIndex:titleButton.tag withObject:[NSNumber numberWithBool:NO]];
-            
-            // Reposition all CollapseClickCells below Cell
-            [self repositionCollapseClickCellsBelowIndex:titleButton.tag withOffset:-1*(cell.ContentView.frame.size.height + kCCPad)];
+    // Cell is OPEN -> CLOSED
+    if ([[self.isClickedArray objectAtIndex:titleButton.tag] boolValue] == YES) {
+        [self closeCollapseClickCellAtIndex:titleButton.tag animated:YES];
+    }
+    // Cell is CLOSED -> OPEN
+    else {
+        [self openCollapseClickCellAtIndex:titleButton.tag animated:YES];
+    }
+}
+
+#pragma mark - Open CollapseClickCell
+-(void)openCollapseClickCellAtIndex:(int)index animated:(BOOL)animated {
+    // Check if it's not open first
+    if ([[self.isClickedArray objectAtIndex:index] boolValue] != YES) {
+        float duration = 0;
+        if (animated) {
+            duration = 0.25;
         }
-        
-        // Cell is CLOSED -> OPEN
-        else {
+        [UIView animateWithDuration:duration animations:^{
             // Resize Cell
-            CollapseClickCell *cell = [self.dataArray objectAtIndex:titleButton.tag];
+            CollapseClickCell *cell = [self.dataArray objectAtIndex:index];
             cell.frame = CGRectMake(cell.frame.origin.x, cell.frame.origin.y, cell.frame.size.width, cell.ContentView.frame.origin.y + cell.ContentView.frame.size.height + kCCPad);
             
             // Change Arrow orientation
@@ -151,12 +150,61 @@
             cell.TitleArrow.transform = transform;
             
             // Change isClickedArray
-            [self.isClickedArray replaceObjectAtIndex:titleButton.tag withObject:[NSNumber numberWithBool:YES]];
+            [self.isClickedArray replaceObjectAtIndex:index withObject:[NSNumber numberWithBool:YES]];
             
             // Reposition all CollapseClickCells below Cell
-            [self repositionCollapseClickCellsBelowIndex:titleButton.tag withOffset:cell.ContentView.frame.size.height + kCCPad];
+            [self repositionCollapseClickCellsBelowIndex:index withOffset:cell.ContentView.frame.size.height + kCCPad];
+        }];
+    }
+}
+
+-(void)openCollapseClickCellsWithIndexes:(NSArray *)indexArray animated:(BOOL)animated {
+    // This works off of NSNumbers for each Index
+    for (int ii = 0; ii < indexArray.count; ii++) {
+        id indexID = indexArray[ii];
+        if ([indexID isKindOfClass:[NSNumber class]]) {
+            [self openCollapseClickCellAtIndex:[indexID intValue] animated:animated];
         }
-    }];
+    }
+    
+}
+
+
+
+#pragma mark - Close CollapseClickCell
+-(void)closeCollapseClickCellAtIndex:(int)index animated:(BOOL)animated {
+    // Check if it's open first
+    if ([[self.isClickedArray objectAtIndex:index] boolValue] == YES) {
+        float duration = 0;
+        if (animated) {
+            duration = 0.25;
+        }
+        [UIView animateWithDuration:duration animations:^{
+            // Resize Cell
+            CollapseClickCell *cell = [self.dataArray objectAtIndex:index];
+            cell.frame = CGRectMake(cell.frame.origin.x, cell.frame.origin.y, cell.frame.size.width, kCCHeaderHeight);
+            
+            // Change Arrow orientation
+            CGAffineTransform transform = CGAffineTransformMakeRotation(0);
+            cell.TitleArrow.transform = transform;
+            
+            // Change isClickedArray
+            [self.isClickedArray replaceObjectAtIndex:index withObject:[NSNumber numberWithBool:NO]];
+            
+            // Reposition all CollapseClickCells below Cell
+            [self repositionCollapseClickCellsBelowIndex:index withOffset:-1*(cell.ContentView.frame.size.height + kCCPad)];
+        }];
+    }
+}
+
+-(void)closeCollapseClickCellsWithIndexes:(NSArray *)indexArray animated:(BOOL)animated {
+    // This works off of NSNumbers for each Index
+    for (int ii = 0; ii < indexArray.count; ii++) {
+        id indexID = indexArray[ii];
+        if ([indexID isKindOfClass:[NSNumber class]]) {
+            [self closeCollapseClickCellAtIndex:[indexID intValue] animated:animated];
+        }
+    }
 }
 
 
