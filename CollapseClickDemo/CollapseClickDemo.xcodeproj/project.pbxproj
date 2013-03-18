@@ -24,6 +24,8 @@
 		C06758A116F67EE700CE7AA1 /* CollapseClickArrow.m in Sources */ = {isa = PBXBuildFile; fileRef = C067589D16F67EE700CE7AA1 /* CollapseClickArrow.m */; };
 		C06758A716F6803C00CE7AA1 /* password-01.png in Resources */ = {isa = PBXBuildFile; fileRef = C06758A516F6803C00CE7AA1 /* password-01.png */; };
 		C06758A816F6803C00CE7AA1 /* username-01.png in Resources */ = {isa = PBXBuildFile; fileRef = C06758A616F6803C00CE7AA1 /* username-01.png */; };
+		C06758E816F6ADE200CE7AA1 /* icon57.png in Resources */ = {isa = PBXBuildFile; fileRef = C06758E616F6ADE200CE7AA1 /* icon57.png */; };
+		C06758E916F6ADE200CE7AA1 /* icon114.png in Resources */ = {isa = PBXBuildFile; fileRef = C06758E716F6ADE200CE7AA1 /* icon114.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +54,8 @@
 		C067589D16F67EE700CE7AA1 /* CollapseClickArrow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollapseClickArrow.m; sourceTree = "<group>"; };
 		C06758A516F6803C00CE7AA1 /* password-01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "password-01.png"; sourceTree = "<group>"; };
 		C06758A616F6803C00CE7AA1 /* username-01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "username-01.png"; sourceTree = "<group>"; };
+		C06758E616F6ADE200CE7AA1 /* icon57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon57.png; sourceTree = "<group>"; };
+		C06758E716F6ADE200CE7AA1 /* icon114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon114.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +75,8 @@
 		C067586716F67ECF00CE7AA1 = {
 			isa = PBXGroup;
 			children = (
+				C06758E616F6ADE200CE7AA1 /* icon57.png */,
+				C06758E716F6ADE200CE7AA1 /* icon114.png */,
 				C067587916F67ECF00CE7AA1 /* CollapseClickDemo */,
 				C067587216F67ECF00CE7AA1 /* Frameworks */,
 				C067587116F67ECF00CE7AA1 /* Products */,
@@ -198,6 +204,8 @@
 				C06758A016F67EE700CE7AA1 /* CollapseClickCell.xib in Resources */,
 				C06758A716F6803C00CE7AA1 /* password-01.png in Resources */,
 				C06758A816F6803C00CE7AA1 /* username-01.png in Resources */,
+				C06758E816F6ADE200CE7AA1 /* icon57.png in Resources */,
+				C06758E916F6ADE200CE7AA1 /* icon114.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -336,6 +344,7 @@
 				C067589516F67ECF00CE7AA1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
