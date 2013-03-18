@@ -94,7 +94,20 @@ This method will return the ContentView for the CollapseClickCell at specified i
 -(void)scrollToCollapseClickCellAtIndex:(int)index animated:(BOOL)animated;
 ```
 This method scrolls your CollapseClick to the cell at your specified index. You can animate this process or not.
- 
+
+```shell
+-(void)openCollapseClickCellAtIndex:(int)index animated:(BOOL)animated;
+
+-(void)closeCollapseClickCellAtIndex:(int)index animated:(BOOL)animated;
+```
+These methods allow you to programmatically open or close a CollapseClickCell, and animate that procedure.
+
+```shell
+-(void)openCollapseClickCellsWithIndexes:(NSArray *)indexArray animated:(BOOL)animated;
+
+-(void)closeCollapseClickCellsWithIndexes:(NSArray *)indexArray animated:(BOOL)animated;
+```
+These methods allow you to programmatically open or close multiple CollapseClickCells at once, and animate that procedure. To do this, create an NSArray of NSNumbers. Each NSNumber will correspond to the indexes of the cells you want to open/close.
  
 Reap What I Sow!
 ================
