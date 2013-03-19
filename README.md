@@ -25,7 +25,7 @@ You are now ready to roll in the Header. Switch to your ViewController.m and mak
 ```shell
 myCollapseClick.CollapseClickDelegate = self;
 ```
-CollapseClick works off of delegation, similar to how UITableView appropriates and displays its data. There are 6 delegate methods you can implement, 3 of which are required.
+CollapseClick works off of delegation, similar to how UITableView appropriates and displays its data. There are 6 delegate methods you can implement, **3 of which are required**.
 
 ## Required Delegate Methods ##
 
