@@ -10,7 +10,7 @@ Drag the included **CollapseClick.m, CollapseClick.h, CollapseClickCell.m, Colla
 
 Import CollapseClick.h into your ViewController.h file. Next, in InterfaceBuilder, drag a UIScrollView out into your ViewController. Click on the Identity Inspector (3rd icon from the left, in the Right Pane in XCode) and change the class to <code>CollapseClick</code>. Connect up your CollapseClick to your ViewController.h file. Now add the CollapseClickDelegate. Your interface should look like this now:
 
-```shell
+```objc
 #import <UIKit/UIKit.h>
 #import "CollapseClick.h"
 
@@ -22,28 +22,28 @@ Import CollapseClick.h into your ViewController.h file. Next, in InterfaceBuilde
 ```
 
 You are now ready to roll in the Header. Switch to your ViewController.m and make sure you set the delegate in ViewDidLoad.
-```shell
+```objc
 myCollapseClick.CollapseClickDelegate = self;
 ```
 CollapseClick works off of delegation, similar to how UITableView appropriates and displays its data. There are 6 delegate methods you can implement, **3 of which are required**.
 
 ## Required Delegate Methods ##
 
-```shell
+```objc
 -(int)numberOfCellsForCollapseClick {
     return (int)newInt;
 }
 ```
 This method is fairly clear, it's just the number of CollapseClick Cells to display. Usually you would use this similar to a UITableView with your data array's count being the return here.
 
-```shell
+```objc
 -(NSString *)titleForCollapseClickAtIndex:(int)index {
     return (NSString*)newTitle;
 }
 ```
 This method just sets the Title Label's text for each CollapseClick Cell. 
 
-```shell
+```objc
 -(UIView *)viewForCollapseClickContentViewAtIndex:(int)index {
     return (UIView *)contentView;
 }
@@ -53,21 +53,21 @@ This method sets the ContentView property of each CollapseClick Cell. This is th
  
 ## Optional Delegate Methods ##
 
-```shell
+```objc
 -(UIColor *)colorForCollapseClickTitleViewAtIndex:(int)index {
     return (UIColor *)color;
 }
 ```
 This method sets the background color for your CollapseClick Cell's header or TitleView. It's the red area in the screenshot above. Default is <code>[UIColor colorWithWhite:0.4 alpha:1.0]</code>
 
-```shell
+```objc
 -(UIColor *)colorForTitleLabelAtIndex:(int)index {
     return (UIColor *)color;
 }
 ```
 This method sets the Title Label's textColor property. Default is <code>[UIColor colorWithWhite]</code>
 
-```shell
+```objc
 -(UIColor *)colorForTitleArrowAtIndex:(int)index {
     return (UIColor *)color;
 }
@@ -77,34 +77,34 @@ This method sets the color of the arrow at the right of each CollapseClick Cell.
  
 ## Additional CollapseClick Methods ##
 
-```shell
+```objc
 -(void)reloadCollapseClick;
 ```
 This method will redraw and lay out your CollapseClick View. Call this method after a change to your data that you are using in conjunction with CollapseClick.
 
-```shell
+```objc
 -(CollapseClickCell *)collapseClickCellForIndex:(int)index;
 ```
 This method will return the entire CollapseClickCell at specified index. There is also a method for returning just the ContentView further down.
 
-```shell
+```objc
 -(UIView *)contentViewForCellAtIndex:(int)index;
 ```
 This method will return the ContentView for the CollapseClickCell at specified index.
 
-```shell
+```objc
 -(void)scrollToCollapseClickCellAtIndex:(int)index animated:(BOOL)animated;
 ```
 This method scrolls your CollapseClick to the cell at your specified index. You can animate this process or not.
 
-```shell
+```objc
 -(void)openCollapseClickCellAtIndex:(int)index animated:(BOOL)animated;
 
 -(void)closeCollapseClickCellAtIndex:(int)index animated:(BOOL)animated;
 ```
 These methods allow you to programmatically open or close a CollapseClickCell, and animate that procedure.
 
-```shell
+```objc
 -(void)openCollapseClickCellsWithIndexes:(NSArray *)indexArray animated:(BOOL)animated;
 
 -(void)closeCollapseClickCellsWithIndexes:(NSArray *)indexArray animated:(BOOL)animated;
