@@ -116,7 +116,13 @@ These methods allow you to programmatically open or close a CollapseClickCell, a
 -(void)closeCollapseClickCellsWithIndexes:(NSArray *)indexArray animated:(BOOL)animated;
 ```
 These methods allow you to programmatically open or close multiple CollapseClickCells at once, and animate that procedure. To do this, create an NSArray of NSNumbers. Each NSNumber will correspond to the indexes of the cells you want to open/close.
- 
+
+## CocoaPods ##
+
+<code>pod 'CollapseClick', '~> 0.0.1'</code>
+
+For help setting up and maintaining dependencies using CocoaPods check out this link: http://cocoapods.org/
+
 Reap What I Sow!
 ================
 
