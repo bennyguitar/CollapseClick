@@ -122,6 +122,8 @@
 
 #pragma mark - Did Click
 -(void)didSelectCollapseClickButton:(UIButton *)titleButton {
+    BOOL isOpen = NO;
+    
     // Cell is OPEN -> CLOSED
     if ([[self.isClickedArray objectAtIndex:titleButton.tag] boolValue] == YES) {
         [self closeCollapseClickCellAtIndex:titleButton.tag animated:YES];
@@ -129,6 +131,12 @@
     // Cell is CLOSED -> OPEN
     else {
         [self openCollapseClickCellAtIndex:titleButton.tag animated:YES];
+        isOpen = YES;
+    }
+    
+    // Call delegate method
+    if ([(id)CollapseClickDelegate respondsToSelector:@selector(didClickCollapseClickCellAtIndex:isNowOpen:)]) {
+        [CollapseClickDelegate didClickCollapseClickCellAtIndex:titleButton.tag isNowOpen:isOpen];
     }
 }
 
