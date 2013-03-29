@@ -99,6 +99,9 @@
     return [UIColor colorWithWhite:0.0 alpha:0.25];
 }
 
+-(void)didClickCollapseClickCellAtIndex:(int)index isNowOpen:(BOOL)open {
+    NSLog(@"%d and it's open:%@", index, (open ? @"YES" : @"NO"));
+}
 
 
 #pragma mark - TextField Delegate for Demo
