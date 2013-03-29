@@ -25,7 +25,7 @@ You are now ready to roll in the Header. Switch to your ViewController.m and mak
 ```objc
 myCollapseClick.CollapseClickDelegate = self;
 ```
-CollapseClick works off of delegation, similar to how UITableView appropriates and displays its data. There are 6 delegate methods you can implement, **3 of which are required**.
+CollapseClick works off of delegation, similar to how UITableView appropriates and displays its data. There are 7 delegate methods you can implement, **3 of which are required**.
 
 ## Required Delegate Methods ##
 
@@ -73,7 +73,13 @@ This method sets the Title Label's textColor property. Default is <code>[UIColor
 }
 ```
 This method sets the color of the arrow at the right of each CollapseClick Cell. Default is <code>[UIColor colorWithWhite:0.0 alpha:0.35]</code>
- 
+
+```objc
+-(void)didClickCollapseClickCellAtIndex:(int)index isNowOpen:(BOOL)open; {
+    // Do something here if you wish
+}
+```
+This method allows you to run any methods after clicking a CollapseClick Cell, and lets you know if the cell is now open (or closed if FALSE).
  
 ## Additional CollapseClick Methods ##
 
