@@ -21,9 +21,10 @@ Import CollapseClick.h into your ViewController.h file. Next, in InterfaceBuilde
 @end
 ```
 
-You are now ready to roll in the Header. Switch to your ViewController.m and make sure you set the delegate in ViewDidLoad.
+You are now ready to roll in the Header. Switch to your ViewController.m and make sure you set the delegate in ViewDidLoad and call the reload method.
 ```objc
 myCollapseClick.CollapseClickDelegate = self;
+[myCollapseClick reloadCollapseClick];
 ```
 CollapseClick works off of delegation, similar to how UITableView appropriates and displays its data. There are 7 delegate methods you can implement, **3 of which are required**.
 
