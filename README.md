@@ -120,7 +120,7 @@ These methods allow you to programmatically open or close multiple CollapseClick
 
 ## CocoaPods ##
 
-<code>pod 'CollapseClick', '~> 0.0.1'</code>
+<code>pod 'CollapseClick', '~> 1.0.1'</code>
 
 For help setting up and maintaining dependencies using CocoaPods check out this link: http://cocoapods.org/
 
