@@ -23,7 +23,30 @@
     return self;
 }
 
-
+- (void)layoutSubviews
+{
+    [super layoutSubviews];
+    
+    for (int i = 0; i < self.isClickedArray.count; i++) {
+        // only layout opened cells
+        if ([[self.isClickedArray objectAtIndex:i] boolValue]) {
+            CollapseClickCell *cell = [self.dataArray objectAtIndex:i];
+            
+            float contentHeight = ((UIView *)[cell.ContentView.subviews lastObject]).frame.size.height;
+            
+            // cell content height is changed
+            if (contentHeight != cell.ContentView.frame.size.height) {
+                float offset = cell.ContentView.frame.size.height - contentHeight;
+                
+                CGRect contentViewFrame = CGRectMake(cell.ContentView.frame.origin.x, cell.ContentView.frame.origin.y, cell.ContentView.frame.size.width, contentHeight);
+                
+                cell.ContentView.frame = contentViewFrame;
+                cell.frame = CGRectMake(cell.frame.origin.x, cell.frame.origin.y, cell.frame.size.width, cell.ContentView.frame.origin.y + cell.ContentView.frame.size.height + kCCPad);
+                [self repositionCollapseClickCellsBelowIndex:i withOffset:-1*offset];
+            }
+        }
+    }
+}
 #pragma mark - Load Data
 -(void)reloadCollapseClick {
     // Set Up: Height
@@ -224,7 +247,6 @@
     
     return nil;
 }
-
 
 #pragma mark - Scroll To Cell
 -(void)scrollToCollapseClickCellAtIndex:(int)index animated:(BOOL)animated {

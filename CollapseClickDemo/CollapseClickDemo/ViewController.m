@@ -110,6 +110,11 @@
     return YES;
 }
 
+// Example of change content view frame and then update collapseClick layout.
+- (IBAction)buttonClicked:(id)sender {
+    test1View.frame = CGRectMake(0, 0, test1View.frame.size.width, test1View.frame.size.height + 50);
+    [myCollapseClick setNeedsLayout];
+}
 
 
 @end
